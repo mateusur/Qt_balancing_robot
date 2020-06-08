@@ -302,7 +302,7 @@ public slots:
 signals:
     /*!
     * \brief Sygnał zmiany wartości.
-    * \param Aktualna wartość naładowania.
+    * \param value - aktualna wartość naładowania.
     */
     void valueChanged(double value);
 };
