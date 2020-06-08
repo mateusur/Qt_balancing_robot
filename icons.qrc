@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/check.png</file>
+        <file>icons/icons_error.png</file>
+        <file>icons/shutdown_48.png</file>
+        <file>icons/raspberry_48.png</file>
+        <file>icons/signal_48.png</file>
+        <file>icons/pause.png</file>
+        <file>icons/pitch_yaw_roll.png</file>
+        <file>icons/engine3-50.png</file>
+    </qresource>
+</RCC>
