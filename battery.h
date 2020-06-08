@@ -203,106 +203,106 @@ public:
 public slots:
     /*!
     * \brief Metoda ustawiająca zakres (dla typu double).
-    * \param minValue
-    * \param maxValue
+    * \param minValue - minimalna wartość.
+    * \param maxValue - maksymalna wartość.
     */
     void setRange(double minValue, double maxValue);
     /*!
     * \brief Metoda ustawiająca zakres (dla typu int).
-    * \param minValue
-    * \param maxValue
+    * \param minValue - minimalna wartość.
+    * \param maxValue - maksymalna wartość.
     */
     void setRange(int minValue, int maxValue);
     /*!
     * \brief Metoda ustawiająca minimalną wartość.
-    * \param minValue
+    * \param minValue - minimalna wartość.
     */
     void setMinValue(double minValue);
     /*!
     * \brief Metoda ustawiająca maksymalną wartość.
-    * \param maxValue
+    * \param maxValue - maksymalna wartość.
     */
     void setMaxValue(double maxValue);
     /*!
     * \brief Metoda ustawiająca wartość (typu double)
-    * \param value
+    * \param value - aktualna wartość.
     */
     void setValue(double value);
     /*!
     * \brief Metoda ustawiająca wartość (typu int).
-    * \param value
+    * \param value - aktualna wartość.
     */
     void setValue(int value);
     /*!
     * \brief Metoda ustawiająca wartość alarmującą (typu double).
-    * \param alarmValue
+    * \param alarmValue - alarmująca wartość.
     */
     void setAlarmValue(double alarmValue);
     /*!
     * \brief Metoda ustawiająca wartość alarmującą (typu int).
-    * \param alarmValue
+    * \param alarmValue - alarmująca wartość.
     */
     void setAlarmValue(int alarmValue);
     /*!
     * \brief Metoda ustawiająca wartość skoku (typu double).
-    * \param step
+    * \param step - wartość skoku.
     */
     void setStep(double step);
     /*!
     * \brief Metoda ustawiająca wartość skoku (typu int).
-    * \param step
+    * \param step - wartość skoku.
     */
     void setStep(int step);
     /*!
     * \brief Metoda ustawiająca wartość promienia ramki.
-    * \param borderRadius
+    * \param borderRadius - wartość promienia ramki.
     */
     void setBorderRadius(int borderRadius);
     /*!
     * \brief Metoda ustawiająca wartość promienia tła.
-    * \param bgRadius
+    * \param bgRadius - wartość promienia tła.
     */
     void setBgRadius(int bgRadius);
     /*!
     * \brief Metoda ustawiająca wartość promienia główki baterii.
-    * \param headRadius
+    * \param headRadius - wartość promienia główki baterii.
     */
     void setHeadRadius(int headRadius);
     /*!
     * \brief Metoda ustawiająca kolor początkowy ramki.
-    * \param borderColorStart
+    * \param borderColorStart - kolor początkowy ramki.
     */
     void setBorderColorStart(const QColor &borderColorStart);
     /*!
     * \brief Metoda ustawiająca kolor końcowy ramki.
-    * \param borderColorEnd
+    * \param borderColorEnd - kolor końcowy ramki.
     */
     void setBorderColorEnd(const QColor &borderColorEnd);
     /*!
     * \brief Metoda ustawiająca kolor początkowy alarmu.
-    * \param alarmColorStart
+    * \param alarmColorStart - kolor początkowy alarmu.
     */
     void setAlarmColorStart(const QColor &alarmColorStart);
     /*!
     * \brief Metoda ustawiająca kolor końcowy alarmu.
-    * \param alarmColorEnd
+    * \param alarmColorEnd - kolor końcowy alarmu.
     */
     void setAlarmColorEnd(const QColor &alarmColorEnd);
     /*!
     * \brief Metoda ustawiająca początkowy kolor wypełnienia.
-    * \param normalColorStart
+    * \param normalColorStart - kolor początkowy wypełnienia.
     */
     void setNormalColorStart(const QColor &normalColorStart);
     /*!
     * \brief Metoda ustawiająca końcowy kolor wypełnienia.
-    * \param normalColorEnd
+    * \param normalColorEnd - kolor końcowy wypełnienia.
     */
     void setNormalColorEnd(const QColor &normalColorEnd);
 
 signals:
     /*!
     * \brief Sygnał zmiany wartości.
-    * \param value
+    * \param Aktualna wartość naładowania.
     */
     void valueChanged(double value);
 };
