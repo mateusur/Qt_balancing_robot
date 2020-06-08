@@ -13,6 +13,7 @@ class Battery : public QWidget
 public:
     /*!
     * \brief Konstruktor baterii.
+    * \param parent
     */
     explicit Battery(QWidget *parent = 0);
     ~Battery();
@@ -43,14 +44,17 @@ private slots:
 private:
     /*!
     * \brief Minimalna wartość (zakres).
+    *
     */
     double minValue;
     /*!
     * \brief Maksymalna wartość (zakres).
+    *
     */
     double maxValue;
     /*!
     * \brief Ustawiana wartość.
+    *
     */
     double value;
     /*!
@@ -117,150 +121,188 @@ private:
 public:
     /*!
     * \brief Metoda pobierająca minimalna wartość.
+    * \return Minimalna wartość.
     */
     double getMinValue()            const;
     /*!
     * \brief Metoda pobierająca maksymalną wartość.
+    * \return Maksymalna wartość.
     */
     double getMaxValue()            const;
     /*!
     * \brief Metoda pobierająca wartość.
+    * \return Aktualna wartość.
     */
     double getValue()               const;
     /*!
     * \brief Metoda pobierająca wartość alramującą.
+    * \return Wartość alarmująca.
     */
     double getAlarmValue()          const;
     /*!
     * \brief Metoda pobierająca wartość skoku.
+    * \return Wartość skosku.
     */
     double getStep()                const;
     /*!
     * \brief Metoda pobierająca wartość promienia ramki.
+    * \return Wartość promienia obramowania.
     */
     int getBorderRadius()           const;
     /*!
     * \brief Metoda pobierająca wartość promienia tła.
+    * \return Wartość promienia tła.
     */
     int getBgRadius()               const;
     /*!
-    * \brief Metoda pobierająca wartość promienia główki.
+    * \brief Metoda pobierająca wartość promienia główki baterii.
+    * \return Wartość promienia główki baterii.
     */
     int getHeadRadius()             const;
     /*!
     * \brief Metoda pobierająca kolor początkowy ramki.
+    * \return Kolor początkowy obramowania.
     */
     QColor getBorderColorStart()    const;
     /*!
     * \brief Metoda pobierająca kolor końcowy ramki.
+    * \return Kolor końcowy obramowania.
     */
     QColor getBorderColorEnd()      const;
     /*!
     * \brief Metoda pobierająca kolor początkowy alramu.
+    * \return Kolor początkowy alarmu.
     */
     QColor getAlarmColorStart()     const;
     /*!
     * \brief Metoda pobierająca kolor końcowy alramu.
+    * \return Kolor końcowy alarmu.
     */
     QColor getAlarmColorEnd()       const;
     /*!
     * \brief Metoda pobierająca kolor początkowy normalnego trybu.
+    * \return Kolor początkowy normalnego stanu.
     */
     QColor getNormalColorStart()    const;
     /*!
     * \brief Metoda pobierająca kolor końcowy normalnego trybu.
+    * \return Kolor końcowy normalnego stanu.
     */
     QColor getNormalColorEnd()      const;
     /*!
     * \brief Metoda pobierająca sugerowany rozmiar.
+    * \return Sugerowany rozmiar.
     */
     QSize sizeHint()                const;
     /*!
     * \brief Metoda pobierająca minimalny rozmiar.
+    * \return minimalny rozmiar.
     */
     QSize minimumSizeHint()         const;
 
 public slots:
     /*!
     * \brief Metoda ustawiająca zakres (dla typu double).
+    * \param Minimalna wartość.
+    * \param Maksymalna wartość.
     */
     void setRange(double minValue, double maxValue);
     /*!
     * \brief Metoda ustawiająca zakres (dla typu int).
+    * \param Minimalna wartość.
+    * \param Maksymalna wartość.
     */
     void setRange(int minValue, int maxValue);
     /*!
     * \brief Metoda ustawiająca minimalną wartość.
+    * \param Minimalna wartość.
     */
     void setMinValue(double minValue);
     /*!
     * \brief Metoda ustawiająca maksymalną wartość.
+    * \param Maksymalna wartość.
     */
     void setMaxValue(double maxValue);
     /*!
-    * \brief Metoda ustawiająca wartość (typu double).
+    * \brief Metoda ustawiająca wartość (typu double)
+    * \param Aktualna wartość.
     */
     void setValue(double value);
     /*!
     * \brief Metoda ustawiająca wartość (typu int).
+    * \param Aktualna wartość.
     */
     void setValue(int value);
     /*!
     * \brief Metoda ustawiająca wartość alarmującą (typu double).
+    * \param Alarmująca wartość.
     */
     void setAlarmValue(double alarmValue);
     /*!
     * \brief Metoda ustawiająca wartość alarmującą (typu int).
+    * \param Alarmująca wartość.
     */
     void setAlarmValue(int alarmValue);
     /*!
     * \brief Metoda ustawiająca wartość skoku (typu double).
+    * \param Wartość skoku.
     */
     void setStep(double step);
     /*!
     * \brief Metoda ustawiająca wartość skoku (typu int).
+    * \param Wartość skoku.
     */
     void setStep(int step);
     /*!
     * \brief Metoda ustawiająca wartość promienia ramki.
+    * \param Wartość promienia ramki.
     */
     void setBorderRadius(int borderRadius);
     /*!
     * \brief Metoda ustawiająca wartość promienia tła.
+    * \param Wartość promienia tła.
     */
     void setBgRadius(int bgRadius);
     /*!
     * \brief Metoda ustawiająca wartość promienia główki baterii.
+    * \param Wartość promienia główki baterii.
     */
     void setHeadRadius(int headRadius);
     /*!
     * \brief Metoda ustawiająca kolor początkowy ramki.
+    * \param Kolor początkowy ramki.
     */
     void setBorderColorStart(const QColor &borderColorStart);
     /*!
     * \brief Metoda ustawiająca kolor końcowy ramki.
+    * \param Kolor końcowy ramki.
     */
     void setBorderColorEnd(const QColor &borderColorEnd);
     /*!
     * \brief Metoda ustawiająca kolor początkowy alarmu.
+    * \param Kolor początkowy alarmu.
     */
     void setAlarmColorStart(const QColor &alarmColorStart);
     /*!
     * \brief Metoda ustawiająca kolor końcowy alarmu.
+    * \param Kolor końcowy alarmu.
     */
     void setAlarmColorEnd(const QColor &alarmColorEnd);
     /*!
     * \brief Metoda ustawiająca początkowy kolor wypełnienia.
+    * \param Kolor początkowy wypełnienia.
     */
     void setNormalColorStart(const QColor &normalColorStart);
     /*!
     * \brief Metoda ustawiająca końcowy kolor wypełnienia.
+    * \param Kolor końcowy wypełnienia.
     */
     void setNormalColorEnd(const QColor &normalColorEnd);
 
 signals:
     /*!
     * \brief Sygnał zmiany wartości.
+    * \param Aktualna wartość naładowania.
     */
     void valueChanged(double value);
 };

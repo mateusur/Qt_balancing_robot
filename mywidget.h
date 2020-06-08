@@ -7,14 +7,14 @@
 //#include <QDebug>
 
 namespace Ui {
+
+class MyWidget;
+}
 /*!
 * \brief Pozwala na prostą animacje robota.
 *
 * Klasa odpowiada za rysowanie prostej animacji robota na podstawie odebranego kąta.
 */
-class MyWidget;
-}
-
 class MyWidget : public QWidget
 {
     Q_OBJECT
@@ -53,7 +53,6 @@ protected:
 //            painter.drawRect(rect);
 //            painter.drawPoint(rect.center());
 //            //qDebug() << "Lewy dol: " << rect.bottomLeft() << " Prawy dol: " << rect.bottomRight();
-
 //            QRect rect2(-20,50,40,40);
 //            QPainter painter2(this);
 //            painter2.setBrush(QColor(0, 0, 255, 127));
@@ -62,7 +61,6 @@ protected:
 //            //painter2.translate(-rect2.width()/2,-rect2.height()/2);
 //            painter2.drawEllipse(rect2);
 //            painter2.drawPoint(rect2.center());
-
 //            QTimer::singleShot(100,this, SLOT(update()));
 //        }
 

@@ -8,7 +8,11 @@
 namespace Ui {
 class ConnectWindow;
 }
-
+/*!
+* \brief Okno służące do łączenia z robotem.
+*
+* Okno służące do nawiązywania połączenia z robotem.
+*/
 class ConnectWindow : public QMainWindow
 {
     Q_OBJECT
