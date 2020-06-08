@@ -1,12 +1,6 @@
 #ifndef INTERFACEWINDOW_H
 #define INTERFACEWINDOW_H
-/*!
-* \brief Główne okno aplikacji wyświetlające dane telemetryczne.
-*
-* Główne okno aplikacji, po lewej stronie zawiera aktualne dane o kącie, statusie silników oraz przyciski pozwalające na interakcje z robotem.
-* W środkowej części umieszczono wykresy.
-* Po prawej stronie znajduję się wizualizacja odchylenia robota od pionu.
-*/
+
 #include <QMainWindow>
 #include <QTime>
 #include <QDateTime>
@@ -22,7 +16,13 @@
 namespace Ui {
 class InterfaceWindow;
 }
-
+/*!
+* \brief Główne okno aplikacji wyświetlające dane telemetryczne.
+*
+* Główne okno aplikacji, po lewej stronie zawiera aktualne dane o kącie, statusie silników oraz przyciski pozwalające na interakcje z robotem.
+* W środkowej części umieszczono wykresy.
+* Po prawej stronie znajduję się wizualizacja odchylenia robota od pionu.
+*/
 class InterfaceWindow : public QMainWindow
 {
     Q_OBJECT

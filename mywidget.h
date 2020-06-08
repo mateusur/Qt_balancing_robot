@@ -1,16 +1,17 @@
 #ifndef MYWIDGET_H
 #define MYWIDGET_H
-/*!
-* \brief Pozwala na prostą animacje robota.
-*
-* Klasa odpowiada za rysowanie prostej animacji robota na podstawie odebranego kąta.
-*/
+
 #include <QWidget>
 #include <QtGui>
 #include <QGraphicsEllipseItem>
 //#include <QDebug>
 
 namespace Ui {
+/*!
+* \brief Pozwala na prostą animacje robota.
+*
+* Klasa odpowiada za rysowanie prostej animacji robota na podstawie odebranego kąta.
+*/
 class MyWidget;
 }
 
