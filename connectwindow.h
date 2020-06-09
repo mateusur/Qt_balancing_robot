@@ -18,19 +18,31 @@ class ConnectWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    /*!
+    * \brief Konstruktor.
+    *
+    * \param parent.
+    */
     explicit ConnectWindow(QWidget *parent = nullptr);
     ~ConnectWindow();
 private:
     /*!
     * \brief Metoda ustawiająca ikone dla etykiety.
+    *
+    * \param label - wkaźnik na etykiete.
+    * \param icon - string ze ścieżką do ikony.
     */
      void set_pixmap(QLabel *label,const QString &icon);
 public slots:
      /*!
      * \brief Metoda ustawiająca wiele ikon dla wielu etykiet.
+     * \param text - string aktualnie wpisany w okna łączenia.
      */
     void set_icon(const QString &text);
 private slots:
+    /*!
+    * \brief Metoda nawiązująca połączenie z robotem.
+    */
     void on_pushButton_clicked();
 
 private:

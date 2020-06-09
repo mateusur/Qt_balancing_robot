@@ -22,9 +22,38 @@ class Plot : public QObject
     */
     QComboBox *box;
     /*!
-    * \brief Wektory przechowujące dane telemetryczne.
+    * \brief Wektor przechowujący dane o mocy lewego silnika.
     */
-    QVector<QCPGraphData> LMP, RMP,MLD,MRD,PY,BV,PWQ,PWS,PCU,PCT ;
+    QVector<QCPGraphData> LMP;
+    /*!
+    * \brief Wektor przechowujący dane o mocy prawego silnika.
+    */
+    QVector<QCPGraphData> RMP;
+    /*!
+    * \brief Wektor przechowujący dane o enkoderze lewego silnika.
+    */
+    QVector<QCPGraphData> MLD;
+    /*!
+    * \brief Wektor przechowujący dane o enkoderze prawego silnika.
+    */
+    QVector<QCPGraphData> MRD;
+    /*!
+    * \brief Wektor przechowujący dane o kącie YAW.
+    */
+    QVector<QCPGraphData> PY;
+    /*!
+    * \brief Wektor przechowujący dane o napięciu baterii.
+    */
+    QVector<QCPGraphData> BV;
+    /*!
+    * \brief Wektor przechowujący dane o jakości połączenia.
+    */
+    QVector<QCPGraphData> PWQ;
+    /*!
+    * \brief Wektor przechowujący dane o sile połaczenia.
+    */
+    QVector<QCPGraphData> PWS;
+
     /*!
     * \brief Wskaźnik na timer odpowiadający za częstotliwość odświeżania wykresu.
     */
@@ -32,20 +61,27 @@ class Plot : public QObject
 public:
     /*!
     * \brief Konstruktor.
+    * \param parent
+    * \param Graph - wskaźnik na okno wykresu.
+    * \param Box - wskaźnik na listę rozwijaną.
     */
     explicit Plot(QObject *parent = nullptr,QCustomPlot *Graph= nullptr,QComboBox *Box = nullptr);
     /*!
     * \brief Metoda ustawiająca opis osi Y.
+    * \param label - nowa nazwa osi Y.
     */
     void set_Ylabel(QString label);
     /*!
     * \brief Metoda ustawiająca opis osi X.
+    * \param label - nowa nazwa osi X.
     */
     void set_Xlabel(QString label);
 
 public slots:
     /*!
     * \brief Metoda odpowiadająca na dodanie punktu do odpowiedniego wektora.
+    * \param nazwa - nazwa wektora do którego chcemy dodać punkt.
+    * \param liczba - para składająca się z czasu odebrania punktu oraz wartości.
     */
     void add_point(const QString &nazwa,const QCPGraphData &liczba);
 

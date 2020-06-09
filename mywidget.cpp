@@ -40,16 +40,9 @@ void MyWidget::paintEvent(QPaintEvent *){
     QTimer::singleShot(100,this, SLOT(update()));
 }
 
-void MyWidget::update_degrees()
-{
-    if(rising){
-        degrees+=0.4;
-        if(degrees>20) rising=false;
-    }
-    else{
-        degrees-=0.4;
-        if(degrees<-20) rising=true;
-    }
 
+void MyWidget::updatex(const double &wartosc)
+{
+degrees = wartosc;
 }
 

@@ -17,64 +17,20 @@ InterfaceWindow::InterfaceWindow(QWidget *parent) :
     //Wykres 2
     graph2 = new Plot(this,ui->wykres2,ui->comboBox2);
 
-    //timer1=new QTimer;
     tim_data=new QTimer;
-    //timer3=new QTimer;
-
-//    connect(timer1,SIGNAL(timeout()),this,SLOT(draw()));
-//    connect(timer3,SIGNAL(timeout()),this,SLOT(draw2()));
     connect(tim_data,SIGNAL(timeout()),this,SLOT(recive_data()));
-    //timer1->start(20);
     tim_data->start(5);
-    //timer3->start(20);
-    //Mozliwosc stopowania rysowania przez powdwojne klikniecie na wykres
-//    connect(ui->wykres,SIGNAL(mouseDoubleClick(QMouseEvent*)),this,SLOT(STOP_PLOT()));
-//    connect(ui->wykres2, SIGNAL(mouseDoubleClick(QMouseEvent*)), this, SLOT(STOP_PLOT2()));
+
     ui->widget_battery->setValue(45);
 
     set_icons();
     connect(this,SIGNAL(send_point(QString, QCPGraphData)),graph1,SLOT(add_point(QString , QCPGraphData)));
     connect(this,SIGNAL(send_point(QString, QCPGraphData)),graph2,SLOT(add_point(QString , QCPGraphData)));
-//    emit zwroc_liczbe("LMP",{2,3});
-//    emit zwroc_liczbe("LMP",{12,3});
-//    emit zwroc_liczbe("RMP",{2,21});
-    tim_elapsed.start();
-}
 
-//Zeby byla mozliwosc stopowania rysowania, powinny byc 2 funckje draw (wywolujace inne "wykresiki") - nwm jak to ominac
-//void InterfaceWindow::draw()
-//{
-//}
-//void InterfaceWindow::draw2()
-//{
-//}
-//Metoda pozwalajaca na zatrzymywanie wykresu poprzez podwójne klikniecie
-//void InterfaceWindow::STOP_PLOT()
-//{
-//    if(stop_wcisniety==false){
-//    stop_wcisniety=true;
-//    timer1->stop();
-//    //qDebug() <<"STOP "<< endl;
-//    }
-//    else {
-//        stop_wcisniety=false;
-//        timer1->start();
-//        //qDebug() <<"START "<< endl;
-//    }
-//}
-//void InterfaceWindow::STOP_PLOT2()
-//{
-//    if (stop_wcisniety == false) {
-//        stop_wcisniety = true;
-//        timer3->stop();
-//        //qDebug() <<"STOP "<< endl;
-//    }
-//    else {
-//        stop_wcisniety = false;
-//        timer3->start();
-//        //qDebug() <<"START "<< endl;
-//    }
-//}
+    //connect(this,SIGNAL(send_degrees(double)),ui->widget_robot,SLOT(update_degrees(double)));
+    connect(this,SIGNAL(hello(double)),ui->widget_robot,SLOT(updatex(double)));
+    tim_elapsed.start();  
+}
 
 void InterfaceWindow::set_pixmap(QLabel *label, const QString &path)
 {
@@ -90,6 +46,7 @@ void InterfaceWindow::set_icons()
    set_pixmap(ui->label_signal,":/icons/signal_48.png");
    set_pixmap(ui->label_rotation,":/icons/pitch_yaw_roll.png");
    set_pixmap(ui->label_motor_status,":/icons/engine3-50.png");
+   set_pixmap(ui->label_motor_status_2,":/icons/engine3-50.png");
    //    QPixmap pixmap(":/icons/shutdown_48.png");
    //    QIcon ButtonIcon(pixmap);
    //    QSize iconSize(ui->pushButton->height(),ui->pushButton->height());
@@ -100,7 +57,6 @@ InterfaceWindow::~InterfaceWindow()
 {
     delete ui;
 }
-//Docelowo te funckje powinny byc zastopiane danymi odbieranymi z czujnikow
 void InterfaceWindow::recive_data()
 {
     static char buffRec[0xFF];
@@ -136,6 +92,7 @@ void InterfaceWindow::recive_data()
         double value = data.toInt() / 1000.0;
         ui->lineEdit_3->setText(QString("%1").arg(value));
         emit send_point("PY",{key,value});
+        //emit send_degrees(value);
     }
     else if(!strcmp((char*)buffRec+1, "BV"))
     {
@@ -162,12 +119,12 @@ void InterfaceWindow::recive_data()
     else if(!strcmp((char*)buffRec+1, "PCU"))
     {
         ui->lineEdit_13->setText(data);
-        emit send_point("PCU",{key,data.toDouble()});
+        //emit send_point("PCU",{key,data.toDouble()});
     }
     else if(!strcmp((char*)buffRec+1, "PCT"))
     {
         ui->lineEdit_7->setText(data);
-        emit send_point("PCU",{key,data.toDouble()});
+        //emit send_point("PCU",{key,data.toDouble()});
     }
 }
 

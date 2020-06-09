@@ -30,38 +30,37 @@ class InterfaceWindow : public QMainWindow
 public:
     /*!
     * \brief Konstruktor.
+    * \param parent
     */
     explicit InterfaceWindow(QWidget *parent = nullptr);
     ~InterfaceWindow();
     /*!
     * \brief Wskaźnik na wykres.
     */
-    Plot *graph1, *graph2;
+    Plot *graph1;
+    /*!
+    * \brief Wskaźnik na wykres.
+    */
+    Plot *graph2;
 public slots:
-//    void draw();
-//    void draw2();
     /*!
     * \brief Metoda odbierająca dane z robota.
     */
     void recive_data();
-//    void STOP_PLOT();
-//    void STOP_PLOT2();
 private:
     Ui::InterfaceWindow *ui;
-
-//    QTimer *timer1;
     /*!
     * \brief Wskaźnik na timer odpowiadający za częstotliowść odbieranych danych.
     */
     QTimer *tim_data;
-//    QTimer *timer3;
     /*!
     * \brief Zmienna przechowująca czas trwania programu.
     */
     QElapsedTimer tim_elapsed;
-    //bool stop_wcisniety=false;
     /*!
     * \brief Metoda ustawiająca ikone dla etykiety.
+    * \param label - wkaźnik na etykiete.
+    * \param path - string ze ścieżką do ikony.
     */
     void set_pixmap(QLabel *label, const QString &path);
     /*!
@@ -72,8 +71,12 @@ private:
 signals:
     /*!
     * \brief Sygnał wysyłający punkt do odpowiedniego wykresu.
+    * \param name - nazwa wektora do którego jest wysyłana para.
+    * \param pair - para punktów - czas, wartość.
     */
-    void send_point(QString,const QCPGraphData &liczba);
+    void send_point(const QString &name,const QCPGraphData &pair); //void send_point(QString,const QCPGraphData &liczba);
+    void send_degrees(const double &wartosc);
+    void hello(const double &wartosc);
 };
 
 extern InterfaceWindow* interfaceWindow;

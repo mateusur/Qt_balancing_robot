@@ -6,14 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>720</width>
-    <height>420</height>
+    <width>820</width>
+    <height>570</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>820</width>
+    <height>570</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>KIRA - Self Balancing Robot</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="styleSheet">
     <string notr="true">QPushButton { 
 border: 2px solid grey;
@@ -38,9 +56,21 @@ text-align: center;
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>721</width>
-      <height>421</height>
+      <width>820</width>
+      <height>570</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>820</width>
+      <height>570</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1100</width>
+      <height>700</height>
+     </size>
     </property>
     <property name="styleSheet">
      <string notr="true">QTabWidget::pane { 
@@ -86,301 +116,343 @@ QTabBar::tab:!selected {
      <attribute name="title">
       <string>Default</string>
      </attribute>
-     <widget class="QGroupBox" name="groupBox">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>310</y>
-        <width>161</width>
-        <height>81</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Connection</string>
-      </property>
-      <widget class="QWidget" name="gridLayoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>169</width>
-         <height>53</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit">
-          <property name="text">
-           <string>0</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="label">
-          <property name="text">
-           <string>Signal level</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>Link Quality</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_2">
-          <property name="text">
-           <string>0</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>dBm</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QLabel" name="label_signal">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>0</y>
-         <width>21</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_2">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>310</y>
-        <width>161</width>
-        <height>81</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Battery Status</string>
-      </property>
-      <widget class="QLabel" name="label_5">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>60</y>
-         <width>47</width>
-         <height>13</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>9.0 [V]</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_6">
-       <property name="geometry">
-        <rect>
-         <x>110</x>
-         <y>60</y>
-         <width>47</width>
-         <height>13</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>12.6 [V]</string>
-       </property>
-      </widget>
-      <widget class="Battery" name="widget_battery" native="true">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>141</width>
-         <height>41</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_3">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>0</y>
-        <width>120</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Operating Mode</string>
-      </property>
-      <widget class="QWidget" name="verticalLayoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>105</width>
-         <height>49</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QRadioButton" name="radioButton">
-          <property name="text">
-           <string>Teleoperated</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="radioButton_2">
-          <property name="text">
-           <string>Autonomous</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_4">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>201</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Rotation</string>
-      </property>
-      <widget class="QWidget" name="gridLayoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>181</width>
-         <height>47</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_2">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_7">
-          <property name="text">
-           <string>Pitch</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLineEdit" name="lineEdit_3">
-          <property name="text">
-           <string>0</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="horizontalLayoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>70</y>
-         <width>151</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLabel" name="label_10">
-          <property name="text">
-           <string>Accuracy:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_6">
-          <property name="text">
-           <string>unreliable</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QLabel" name="label_rotation">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>0</y>
-         <width>21</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
+     <layout class="QGridLayout" name="gridLayout_14">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_13" columnminimumwidth="0,0,160">
+        <item row="0" column="0" rowspan="2">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>115</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>220</width>
+              <height>165</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Rotation</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <item row="2" column="0">
+                <widget class="QLineEdit" name="lineEdit_3">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>Yaw</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Accuracy:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_6">
+                 <property name="text">
+                  <string>unreliable</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>2</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_6">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>280</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>220</width>
+              <height>320</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Motors Status</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <item row="3" column="1">
+                <widget class="QLineEdit" name="lineEdit_8">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_11">
+                 <property name="text">
+                  <string>Operational</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>Encoder</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLineEdit" name="lineEdit_11">
+                 <property name="text">
+                  <string>Yes</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QProgressBar" name="progressBar_2">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_14">
+                 <property name="text">
+                  <string>Power</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Right motor</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_motor_status">
+                 <property name="maximumSize">
+                  <size>
+                   <width>21</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
 
-qproperty-icon:url(&quot;:/icons/pitch_yaw_roll.png&quot;) ;
+qproperty-icon:url(&quot;:/icons/raspberry_48.png&quot;) ;
 	qproperty-iconSize: 30px 25px;
 	qproperty-position: right;
 
 }
 
 </string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_5">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>310</y>
-        <width>201</width>
-        <height>81</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>EMERYGENCY</string>
-      </property>
-      <widget class="QWidget" name="verticalLayoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>9</x>
-         <y>20</y>
-         <width>181</width>
-         <height>76</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <widget class="QPushButton" name="pushButton">
-          <property name="styleSheet">
-           <string notr="true">QPushButton
+                 </property>
+                 <property name="text">
+                  <string>L</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>1</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="2" column="1">
+                <widget class="QProgressBar" name="progressBar_4">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLineEdit" name="lineEdit_10">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLabel" name="label_19">
+                 <property name="text">
+                  <string>Left motor</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_20">
+                 <property name="text">
+                  <string>Operational</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLineEdit" name="lineEdit_12">
+                 <property name="text">
+                  <string>Yes</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_18">
+                 <property name="text">
+                  <string>Power</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_17">
+                 <property name="text">
+                  <string>Encoder</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_motor_status_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>21</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+
+qproperty-icon:url(&quot;:/icons/raspberry_48.png&quot;) ;
+	qproperty-iconSize: 30px 25px;
+	qproperty-position: right;
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>L</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>1</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_5">
+            <property name="minimumSize">
+             <size>
+              <width>160</width>
+              <height>105</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>230</width>
+              <height>140</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>220</width>
+              <height>110</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>EMERYGENCY</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QPushButton" name="pushButton">
+               <property name="styleSheet">
+                <string notr="true">QPushButton
 {
    /* text-position: center;*/
 	qproperty-icon:url(&quot;:/icons/shutdown_48.png&quot;) ;
@@ -388,16 +460,16 @@ qproperty-icon:url(&quot;:/icons/pitch_yaw_roll.png&quot;) ;
 	/*qproperty-position: left;*/
 }
 </string>
-          </property>
-          <property name="text">
-           <string>CUT OFF POWER</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_3">
-          <property name="styleSheet">
-           <string notr="true">QPushButton
+               </property>
+               <property name="text">
+                <string>CUT OFF POWER</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_3">
+               <property name="styleSheet">
+                <string notr="true">QPushButton
 {
     text-position: center;
 	qproperty-icon:url(&quot;:/icons/pause.png&quot;) ;
@@ -405,441 +477,477 @@ qproperty-icon:url(&quot;:/icons/pitch_yaw_roll.png&quot;) ;
 	/*qproperty-position: right;*/
 }
 </string>
-          </property>
-          <property name="text">
-           <string>STAND STILL</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_6">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>110</y>
-        <width>201</width>
-        <height>201</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Motors Status</string>
-      </property>
-      <widget class="QLabel" name="label_12">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>10</y>
-         <width>201</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Right</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QWidget" name="gridLayoutWidget_3">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>191</width>
-         <height>88</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_14">
-          <property name="text">
-           <string>Power</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_13">
-          <property name="text">
-           <string>Encoder</string>
-          </property>
-         </widget>
+               </property>
+               <property name="text">
+                <string>STAND STILL</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item row="0" column="1">
-         <widget class="QProgressBar" name="progressBar_2">
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="value">
-           <number>0</number>
-          </property>
-         </widget>
+         <layout class="QGridLayout" name="gridLayout_11">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_10">
+            <item row="0" column="0">
+             <widget class="QComboBox" name="comboBox">
+              <item>
+               <property name="text">
+                <string>Yaw</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>CPU temp</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Link quality</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Signal level</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>CPU usage</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Battery voltage</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Left motor power</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Left motor encoder</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Right motor power</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Right motor encoder</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>250</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QCustomPlot" name="wykres" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>550</width>
+                <height>200</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <layout class="QGridLayout" name="gridLayout_8">
+            <item row="0" column="1">
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>250</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="0">
+             <widget class="QComboBox" name="comboBox2">
+              <item>
+               <property name="text">
+                <string>Yaw</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>CPU temp</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Link quality</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Signal level</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>CPU usage</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Battery voltage</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Left motor power</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Left motor encoder</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Right motor power</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Right motor encoder</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QCustomPlot" name="wykres2" native="true">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>550</width>
+                <height>200</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_8">
-          <property name="text">
-           <string>0</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
+        <item row="0" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>120</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Operating Mode</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QRadioButton" name="radioButton">
+               <property name="text">
+                <string>Teleoperated</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_2">
+               <property name="text">
+                <string>Autonomous</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="MyWidget" name="widget_robot" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>160</width>
+              <height>210</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>240</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_11">
-          <property name="text">
-           <string>Operational</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="lineEdit_11">
-          <property name="text">
-           <string>Yes</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
+        <item row="1" column="1" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QGroupBox" name="groupBox_7">
+            <property name="minimumSize">
+             <size>
+              <width>170</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Raspberry Pi Telemetry</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_6">
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit_7">
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="lineEdit_13">
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_21">
+               <property name="text">
+                <string>CPU temp:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_22">
+               <property name="text">
+                <string>CPU usage:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>1</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="minimumSize">
+             <size>
+              <width>190</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Connection</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit">
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="label_3">
+               <property name="maximumSize">
+                <size>
+                 <width>25</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>dBm</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Signal level</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="lineEdit_2">
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>Link Quality</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>1</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="minimumSize">
+             <size>
+              <width>215</width>
+              <height>110</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>250</width>
+              <height>160</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Battery Status</string>
+            </property>
+            <widget class="QLabel" name="label_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>80</y>
+               <width>47</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>9.0 [V]</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_6">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>80</y>
+               <width>47</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>12.6 [V]</string>
+             </property>
+            </widget>
+            <widget class="Battery" name="widget_battery" native="true">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>20</y>
+               <width>141</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>10</height>
+              </size>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
-      </widget>
-      <widget class="QWidget" name="gridLayoutWidget_4">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>120</y>
-         <width>191</width>
-         <height>88</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_5">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_18">
-          <property name="text">
-           <string>Power</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_17">
-          <property name="text">
-           <string>Encoder</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QProgressBar" name="progressBar_4">
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="value">
-           <number>0</number>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_10">
-          <property name="text">
-           <string>0</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_20">
-          <property name="text">
-           <string>Operational</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="lineEdit_12">
-          <property name="text">
-           <string>Yes</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QLabel" name="label_19">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>100</y>
-         <width>201</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Left</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_motor_status">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>0</y>
-         <width>21</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-
-qproperty-icon:url(&quot;:/icons/raspberry_48.png&quot;) ;
-	qproperty-iconSize: 30px 25px;
-	qproperty-position: right;
-
-}
-
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_7">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>310</y>
-        <width>191</width>
-        <height>80</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Raspberry Pi Telemetry</string>
-      </property>
-      <widget class="QWidget" name="gridLayoutWidget_5">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>171</width>
-         <height>53</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_6">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_21">
-          <property name="text">
-           <string>CPU temp</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit_7">
-          <property name="text">
-           <string>0</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_13">
-          <property name="text">
-           <string>0</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_22">
-          <property name="text">
-           <string>CPU usage</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QLabel" name="label_cpu">
-       <property name="geometry">
-        <rect>
-         <x>150</x>
-         <y>0</y>
-         <width>21</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-qproperty-icon:url(&quot;:/icons/raspberry_48.png&quot;) ;
-qproperty-iconSize: 30px 25px;
-/*qproperty-position: right;*/
-}
-
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QCustomPlot" name="wykres" native="true">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>30</y>
-        <width>371</width>
-        <height>111</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QCustomPlot" name="wykres2" native="true">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>170</y>
-        <width>371</width>
-        <height>131</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox2">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>150</y>
-        <width>121</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>Yaw</string>
-       </property>
       </item>
-      <item>
-       <property name="text">
-        <string>CPU temp</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Link quality</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Signal level</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CPU usage</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Battery voltage</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Left motor power</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Left motor encoder</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Right motor power</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Right motor encoder</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="comboBox">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>10</y>
-        <width>121</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>Yaw</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CPU temp</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Link quality</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Signal level</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CPU usage</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Battery voltage</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Left motor power</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Left motor encoder</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Right motor power</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Right motor encoder</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="MyWidget" name="widget" native="true">
-      <property name="geometry">
-       <rect>
-        <x>589</x>
-        <y>100</y>
-        <width>121</width>
-        <height>200</height>
-       </rect>
-      </property>
-     </widget>
+     </layout>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -1138,6 +1246,65 @@ qproperty-iconSize: 30px 25px;
       <string>Live View</string>
      </attribute>
     </widget>
+   </widget>
+   <widget class="QLabel" name="label_rotation">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>50</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+
+qproperty-icon:url(&quot;:/icons/pitch_yaw_roll.png&quot;) ;
+	qproperty-iconSize: 30px 25px;
+	qproperty-position: right;
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>L</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_cpu">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>80</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+qproperty-icon:url(&quot;:/icons/raspberry_48.png&quot;) ;
+qproperty-iconSize: 30px 25px;
+/*qproperty-position: right;*/
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>L</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_signal">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>30</y>
+      <width>64</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>L</string>
+    </property>
    </widget>
   </widget>
  </widget>
