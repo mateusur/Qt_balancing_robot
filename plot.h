@@ -61,23 +61,23 @@ class Plot : public QObject
 public:
     /*!
     * \brief Konstruktor.
-    * \param parent
-    * \param Graph - wskaźnik na okno wykresu.
-    * \param Box - wskaźnik na listę rozwijaną.
+    * \param[in] parent
+    * \param[in] Graph - wskaźnik na okno wykresu.
+    * \param[in] Box - wskaźnik na listę rozwijaną.
     */
     explicit Plot(QObject *parent = nullptr,QCustomPlot *Graph= nullptr,QComboBox *Box = nullptr);
     /*!
     * \brief Metoda ustawiająca opis osi Y.
     *
     * Metoda ustawiająca opis osi Y.
-    * \param label - nowa nazwa osi Y.
+    * \param[in][in] label - nowa nazwa osi Y.
     */
     void set_Ylabel(QString label);
     /*!
     * \brief Metoda ustawiająca opis osi X.
     *
     * Metoda ustawiająca opis osi X.
-    * \param label - nowa nazwa osi X.
+    * \param[in][in] label - nowa nazwa osi X.
     */
     void set_Xlabel(QString label);
 
@@ -86,8 +86,8 @@ public slots:
     * \brief Metoda odpowiadająca na dodanie punktu do odpowiedniego wektora.
     *
     * Metoda odpowiadająca na dodanie punktu do odpowiedniego wektora.
-    * \param nazwa - nazwa wektora do którego chcemy dodać punkt.
-    * \param liczba - para składająca się z czasu odebrania punktu oraz wartości.
+    * \param[in] nazwa - nazwa wektora do którego chcemy dodać punkt.
+    * \param[in] liczba - para składająca się z czasu odebrania punktu oraz wartości.
     */
     void add_point(const QString &nazwa,const QCPGraphData &liczba);
 

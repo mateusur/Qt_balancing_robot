@@ -21,7 +21,7 @@ public:
     /*!
     * \brief Konstruktor.
     *
-    * \param parent.
+    * \param[in] parent.
     */
     explicit ConnectWindow(QWidget *parent = nullptr);
     ~ConnectWindow();
@@ -30,8 +30,8 @@ private:
     * \brief Metoda ustawiająca ikone dla etykiety.
     *
     * Metoda ustawiająca ikone dla etykiety.
-    * \param label - wkaźnik na etykiete.
-    * \param icon - string ze ścieżką do ikony.
+    * \param[in] label - wkaźnik na etykiete.
+    * \param[in] icon - string ze ścieżką do ikony.
     */
      void set_pixmap(QLabel *label,const QString &icon);
 public slots:
@@ -39,7 +39,7 @@ public slots:
      * \brief Metoda ustawiająca wiele ikon dla wielu etykiet.
      *
      * Metoda ustawiająca wiele ikon dla wielu etykiet.
-     * \param text - string aktualnie wpisany w okna łączenia.
+     * \param[in] text - string aktualnie wpisany w okna łączenia.
      */
     void set_icon(const QString &text);
 private slots:

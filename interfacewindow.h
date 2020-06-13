@@ -30,7 +30,7 @@ class InterfaceWindow : public QMainWindow
 public:
     /*!
     * \brief Konstruktor.
-    * \param parent
+    * \param[in] parent
     */
     explicit InterfaceWindow(QWidget *parent = nullptr);
     ~InterfaceWindow();
@@ -61,8 +61,8 @@ private:
     * \brief Metoda ustawiająca ikone dla etykiety.
     *
     * Metoda ustawiająca ikone dla etykiety.
-    * \param label - wkaźnik na etykiete.
-    * \param path - string ze ścieżką do ikony.
+    * \param[in] label - wkaźnik na etykiete.
+    * \param[in] path - string ze ścieżką do ikony.
     */
     void set_pixmap(QLabel *label, const QString &path);
     /*!
@@ -77,8 +77,8 @@ signals:
     * \brief Sygnał wysyłający punkt do odpowiedniego wykresu.
     *
     * Sygnał wysyłający punkt do odpowiedniego wykresu.
-    * \param name - nazwa wektora do którego jest wysyłana para.
-    * \param pair - para punktów - czas, wartość.
+    * \param[in] name - nazwa wektora do którego jest wysyłana para.
+    * \param[in] pair - para punktów - czas, wartość.
     */
     void send_point(const QString &name,const QCPGraphData &pair); //void send_point(QString,const QCPGraphData &liczba);
     void send_degrees(const double &wartosc);
