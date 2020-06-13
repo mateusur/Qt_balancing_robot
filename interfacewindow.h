@@ -61,7 +61,7 @@ private:
     * \brief Metoda ustawiająca ikone dla etykiety.
     *
     * Metoda ustawiająca ikone dla etykiety.
-    * \param[in] label - wkaźnik na etykiete.
+    * \param[in, out] label - wkaźnik na etykiete.
     * \param[in] path - string ze ścieżką do ikony.
     */
     void set_pixmap(QLabel *label, const QString &path);

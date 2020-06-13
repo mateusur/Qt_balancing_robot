@@ -21,7 +21,7 @@ public:
     /*!
     * \brief Konstruktor.
     *
-    * \param[in] parent.
+    * \param[in] parent .
     */
     explicit ConnectWindow(QWidget *parent = nullptr);
     ~ConnectWindow();

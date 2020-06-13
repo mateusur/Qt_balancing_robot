@@ -70,14 +70,14 @@ public:
     * \brief Metoda ustawiająca opis osi Y.
     *
     * Metoda ustawiająca opis osi Y.
-    * \param[in][in] label - nowa nazwa osi Y.
+    * \param[in] label - nowa nazwa osi Y.
     */
     void set_Ylabel(QString label);
     /*!
     * \brief Metoda ustawiająca opis osi X.
     *
     * Metoda ustawiająca opis osi X.
-    * \param[in][in] label - nowa nazwa osi X.
+    * \param[in] label - nowa nazwa osi X.
     */
     void set_Xlabel(QString label);
 
