@@ -59,18 +59,24 @@ private:
     QElapsedTimer tim_elapsed;
     /*!
     * \brief Metoda ustawiająca ikone dla etykiety.
+    *
+    * Metoda ustawiająca ikone dla etykiety.
     * \param label - wkaźnik na etykiete.
     * \param path - string ze ścieżką do ikony.
     */
     void set_pixmap(QLabel *label, const QString &path);
     /*!
     * \brief Metoda ustawiająca wiele ikon dla wielu etykiet.
+    *
+    * Metoda ustawiająca wiele ikon dla wielu etykiet.
     */
     void set_icons();
 
 signals:
     /*!
     * \brief Sygnał wysyłający punkt do odpowiedniego wykresu.
+    *
+    * Sygnał wysyłający punkt do odpowiedniego wykresu.
     * \param name - nazwa wektora do którego jest wysyłana para.
     * \param pair - para punktów - czas, wartość.
     */

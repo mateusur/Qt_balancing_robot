@@ -63,6 +63,10 @@ void ConnectWindow::set_icon(const QString &text)
         set_pixmap(ui->label_pic3,"check");
     else if(text !="25000" && name =="portClient")
         set_pixmap(ui->label_pic3,"error");
+    if( (text =="192.168.1.102" && name =="ipServer") && (text =="8080" && name =="portServer") && (text =="25000" && name =="portClient") )
+        ui->pushButton->setCheckable(true);
+    else
+        ui->pushButton->setCheckable(false);
 }
 
 void ConnectWindow::on_pushButton_clicked()

@@ -29,6 +29,7 @@ private:
     /*!
     * \brief Metoda ustawiająca ikone dla etykiety.
     *
+    * Metoda ustawiająca ikone dla etykiety.
     * \param label - wkaźnik na etykiete.
     * \param icon - string ze ścieżką do ikony.
     */
@@ -36,12 +37,16 @@ private:
 public slots:
      /*!
      * \brief Metoda ustawiająca wiele ikon dla wielu etykiet.
+     *
+     * Metoda ustawiająca wiele ikon dla wielu etykiet.
      * \param text - string aktualnie wpisany w okna łączenia.
      */
     void set_icon(const QString &text);
 private slots:
     /*!
     * \brief Metoda nawiązująca połączenie z robotem.
+    *
+    * Metoda nawiązująca połączenie z robotem.
     */
     void on_pushButton_clicked();
 

@@ -68,11 +68,15 @@ public:
     explicit Plot(QObject *parent = nullptr,QCustomPlot *Graph= nullptr,QComboBox *Box = nullptr);
     /*!
     * \brief Metoda ustawiająca opis osi Y.
+    *
+    * Metoda ustawiająca opis osi Y.
     * \param label - nowa nazwa osi Y.
     */
     void set_Ylabel(QString label);
     /*!
     * \brief Metoda ustawiająca opis osi X.
+    *
+    * Metoda ustawiająca opis osi X.
     * \param label - nowa nazwa osi X.
     */
     void set_Xlabel(QString label);
@@ -80,6 +84,8 @@ public:
 public slots:
     /*!
     * \brief Metoda odpowiadająca na dodanie punktu do odpowiedniego wektora.
+    *
+    * Metoda odpowiadająca na dodanie punktu do odpowiedniego wektora.
     * \param nazwa - nazwa wektora do którego chcemy dodać punkt.
     * \param liczba - para składająca się z czasu odebrania punktu oraz wartości.
     */
@@ -88,10 +94,14 @@ public slots:
 private slots:
     /*!
     * \brief Metoda pozwalająca na wstrzymanie rysowania.
+    *
+    * Metoda pozwalająca na wstrzymanie rysowania.
     */
     void stop_plotting();
     /*!
     * \brief Metoda odświeżająca wykres oraz wybranie odpowiednich danych.
+    *
+    * Metoda odświeżająca wykres oraz wybranie odpowiednich danych.
     */
     void draw();
 signals:

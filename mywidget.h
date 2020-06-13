@@ -46,6 +46,8 @@ protected:
 public slots:
     /*!
     * \brief Metoda odświeżająca wykres.
+    *
+    * Metoda odświeżająca wykres.
     * \param wartosc - kąt na jaki robot ma się wychylić.
     */
 

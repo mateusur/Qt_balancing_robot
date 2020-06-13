@@ -93,12 +93,13 @@ void InterfaceWindow::recive_data()
         ui->lineEdit_3->setText(QString("%1").arg(value));
         emit send_point("PY",{key,value});
         //emit send_degrees(value);
+        emit hello(value);
     }
     else if(!strcmp((char*)buffRec+1, "BV"))
     {
         ui->widget_battery->setValue(data.toInt()/10);
         emit send_point("BV",{key,data.toDouble()/10});
-        //ui->widget_battery->setValue(data.toDouble()/10);
+        ui->widget_battery->setValue(data.toDouble()/10);
     }
     else if(!strcmp((char*)buffRec+1, "PWQ"))
     {
