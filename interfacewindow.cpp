@@ -16,7 +16,7 @@ InterfaceWindow::InterfaceWindow(QWidget *parent) :
     graph1 = new Plot(this,ui->wykres,ui->comboBox);
     //Wykres 2
     graph2 = new Plot(this,ui->wykres2,ui->comboBox2);
-
+    graph3 = new Plot(this,ui->wykres3,ui->comboBox3);
     tim_data=new QTimer;
     connect(tim_data,SIGNAL(timeout()),this,SLOT(recive_data()));
     tim_data->start(5);
@@ -26,6 +26,7 @@ InterfaceWindow::InterfaceWindow(QWidget *parent) :
     set_icons();
     connect(this,SIGNAL(send_point(QString, QCPGraphData)),graph1,SLOT(add_point(QString , QCPGraphData)));
     connect(this,SIGNAL(send_point(QString, QCPGraphData)),graph2,SLOT(add_point(QString , QCPGraphData)));
+    connect(this,SIGNAL(send_point(QString, QCPGraphData)),graph3,SLOT(add_point(QString , QCPGraphData)));
 
     //connect(this,SIGNAL(send_degrees(double)),ui->widget_robot,SLOT(update_degrees(double)));
     connect(this,SIGNAL(hello(double)),ui->widget_robot,SLOT(updatex(double)));
@@ -42,9 +43,9 @@ void InterfaceWindow::set_pixmap(QLabel *label, const QString &path)
 
 void InterfaceWindow::set_icons()
 {
-    set_pixmap(ui->label_cpu,":/icons/raspberry_48.png");
-   set_pixmap(ui->label_signal,":/icons/signal_48.png");
-   set_pixmap(ui->label_rotation,":/icons/pitch_yaw_roll.png");
+    //set_pixmap(ui->label_cpu,":/icons/raspberry_48.png");
+   //set_pixmap(ui->label_signal,":/icons/signal_48.png");
+   //set_pixmap(ui->label_rotation,":/icons/pitch_yaw_roll.png");
    set_pixmap(ui->label_motor_status,":/icons/engine3-50.png");
    set_pixmap(ui->label_motor_status_2,":/icons/engine3-50.png");
    //    QPixmap pixmap(":/icons/shutdown_48.png");

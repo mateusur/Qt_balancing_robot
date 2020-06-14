@@ -42,6 +42,10 @@ public:
     * \brief Wskaźnik na wykres.
     */
     Plot *graph2;
+    /*!
+    * \brief Wskaźnik na wykres.
+    */
+    Plot *graph3;
 public slots:
     /*!
     * \brief Metoda odbierająca dane z robota.

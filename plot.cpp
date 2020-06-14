@@ -6,7 +6,7 @@ Plot::Plot(QObject *parent,QCustomPlot *Graph,QComboBox *Box) : QObject(parent),
     graph->graph(0)->setScatterStyle(QCPScatterStyle::ssNone);
     graph->setInteraction(QCP::iRangeDrag,true);
     graph->setInteraction(QCP::iRangeZoom,true);
-    graph->xAxis->setLabel("Time");
+    graph->xAxis->setLabel("Time [s]");
     refresh_tim = new QTimer;
     refresh_tim->start(40);
     connect(refresh_tim,SIGNAL(timeout()),this,SLOT(draw()));

@@ -20,7 +20,7 @@ MyWidget::~MyWidget()
 void MyWidget::paintEvent(QPaintEvent *){
     QPainter painter(this);
     QTransform transform;
-    transform.translate(60,160);
+    transform.translate(this->width()/2,160);
     transform.rotate(0);
     transform.scale(1, 1);
     painter.setTransform(transform);
