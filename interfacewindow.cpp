@@ -1,3 +1,5 @@
+
+
 #include "interfacewindow.h"
 #include "ui_interfacewindow.h"
 
@@ -29,7 +31,7 @@ InterfaceWindow::InterfaceWindow(QWidget *parent) :
     connect(this,SIGNAL(send_point(QString, QCPGraphData)),graph3,SLOT(add_point(QString , QCPGraphData)));
 
     //connect(this,SIGNAL(send_degrees(double)),ui->widget_robot,SLOT(update_degrees(double)));
-    connect(this,SIGNAL(hello(double)),ui->widget_robot,SLOT(updatex(double)));
+    connect(this,SIGNAL(send_angle(double)),ui->widget_robot,SLOT(update_angle(double)));
     tim_elapsed.start();  
 }
 
@@ -94,7 +96,7 @@ void InterfaceWindow::recive_data()
         ui->lineEdit_3->setText(QString("%1").arg(value));
         emit send_point("PY",{key,value});
         //emit send_degrees(value);
-        emit hello(value);
+        emit send_angle(value);
     }
     else if(!strcmp((char*)buffRec+1, "BV"))
     {

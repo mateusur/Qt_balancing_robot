@@ -41,8 +41,8 @@ void MyWidget::paintEvent(QPaintEvent *){
 }
 
 
-void MyWidget::updatex(const double &wartosc)
+void MyWidget::update_angle(const double &value)
 {
-degrees = wartosc;
+degrees = value * radToDegrees;
 }
 

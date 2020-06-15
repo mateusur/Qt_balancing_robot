@@ -58,14 +58,6 @@ class Plot : public QObject
     * \brief Wskaźnik na timer odpowiadający za częstotliwość odświeżania wykresu.
     */
     QTimer *refresh_tim;
-public:
-    /*!
-    * \brief Konstruktor.
-    * \param[in] parent
-    * \param[in] Graph - wskaźnik na okno wykresu.
-    * \param[in] Box - wskaźnik na listę rozwijaną.
-    */
-    explicit Plot(QObject *parent = nullptr,QCustomPlot *Graph= nullptr,QComboBox *Box = nullptr);
     /*!
     * \brief Metoda ustawiająca opis osi Y.
     *
@@ -80,16 +72,25 @@ public:
     * \param[in] label - nowa nazwa osi X.
     */
     void set_Xlabel(QString label);
+public:
+    /*!
+    * \brief Konstruktor.
+    * \param[in] parent
+    * \param[in] Graph - wskaźnik na okno wykresu.
+    * \param[in] Box - wskaźnik na listę rozwijaną.
+    */
+    explicit Plot(QObject *parent = nullptr,QCustomPlot *Graph= nullptr,QComboBox *Box = nullptr);
+
 
 public slots:
     /*!
     * \brief Metoda odpowiadająca na dodanie punktu do odpowiedniego wektora.
     *
     * Metoda odpowiadająca na dodanie punktu do odpowiedniego wektora.
-    * \param[in] nazwa - nazwa wektora do którego chcemy dodać punkt.
-    * \param[in] liczba - para składająca się z czasu odebrania punktu oraz wartości.
+    * \param[in] name - nazwa wektora do którego chcemy dodać punkt.
+    * \param[in] value - para składająca się z czasu odebrania punktu oraz wartości.
     */
-    void add_point(const QString &nazwa,const QCPGraphData &liczba);
+    void add_point(const QString &name,const QCPGraphData &value);
 
 private slots:
     /*!

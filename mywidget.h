@@ -5,6 +5,7 @@
 #include <QtGui>
 #include <QGraphicsEllipseItem>
 //#include <QDebug>
+#include <QtMath>
 
 namespace Ui {
 
@@ -23,12 +24,6 @@ private:
     * \brief Wskaźnik na timer określający częstotliwość odświeżania.
     */
     QTimer *timer1;
-public:
-    /*!
-    * \brief Konstruktor.
-    */
-    explicit MyWidget(QWidget *parent = nullptr);
-    ~MyWidget();
     /*!
     * \brief Zmienna przechowująca kąt obrotu robota.
     */
@@ -37,6 +32,18 @@ public:
     * \brief Zmienna przechowująca czy kąt rośnie.
     */
     bool rising= true;
+    /*!
+    * \brief Zmienna przechowująca czy kąt rośnie.
+    */
+    const double radToDegrees = 180 / M_PI;
+public:
+    /*!
+    * \brief Konstruktor.
+    */
+    explicit MyWidget(QWidget *parent = nullptr);
+    ~MyWidget();
+
+
 protected:
     /*!
     * \brief Metoda rysująca robota.
@@ -48,10 +55,9 @@ public slots:
     * \brief Metoda odświeżająca wykres.
     *
     * Metoda odświeżająca wykres.
-    * \param[in] wartosc - kąt na jaki robot ma się wychylić.
+    * \param[in] value - kąt na jaki robot ma się wychylić.
     */
-
-    void updatex(const double &wartosc);
+    void update_angle(const double &value);
 private:
     Ui::MyWidget *ui;
 };

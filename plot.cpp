@@ -92,24 +92,24 @@ void Plot::stop_plotting()
         refresh_tim->start();
 }
 
-void Plot::add_point(const QString &nazwa,const QCPGraphData &liczba)
+void Plot::add_point(const QString &name,const QCPGraphData &value)
 {
-    if(nazwa == "LMP")
-        LMP.push_back(liczba);
-    else if(nazwa == "RMP")
-        RMP.push_back(liczba);
-    else if(nazwa == "MLD")
-        MLD.push_back(liczba);
-    else if(nazwa == "MRD")
-        MRD.push_back(liczba);
-    else if(nazwa == "PY")
-        PY.push_back(liczba);
-    else if(nazwa == "BV")
-        BV.push_back(liczba);
-    else if(nazwa == "PWQ")
-        PWQ.push_back(liczba);
-    else if(nazwa == "PWS")
-        PWS.push_back(liczba);
+    if(name == "LMP")
+        LMP.push_back(value);
+    else if(name == "RMP")
+        RMP.push_back(value);
+    else if(name == "MLD")
+        MLD.push_back(value);
+    else if(name == "MRD")
+        MRD.push_back(value);
+    else if(name == "PY")
+        PY.push_back(value);
+    else if(name == "BV")
+        BV.push_back(value);
+    else if(name == "PWQ")
+        PWQ.push_back(value);
+    else if(name == "PWS")
+        PWS.push_back(value);
 //    else if(nazwa == "PCU")
 //        PCU.push_back(liczba);
 //    else if(nazwa == "PCT")

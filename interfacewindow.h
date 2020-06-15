@@ -85,8 +85,14 @@ signals:
     * \param[in] pair - para punktów - czas, wartość.
     */
     void send_point(const QString &name,const QCPGraphData &pair); //void send_point(QString,const QCPGraphData &liczba);
-    void send_degrees(const double &wartosc);
-    void hello(const double &wartosc);
+    //void send_degrees(const double &wartosc);
+    /*!
+    * \brief Sygnał wysyłający wartość odchylenia.
+    *
+    * Sygnał wysyłający wartość odchylenia.
+    * \param[in] rad - wartość odchylenia w radianach.
+    */
+    void send_angle(const double &rad);
 };
 
 extern InterfaceWindow* interfaceWindow;
