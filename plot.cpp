@@ -114,7 +114,6 @@ void Plot::add_point(const QString &name,const QCPGraphData &value)
 //        PCU.push_back(liczba);
 //    else if(nazwa == "PCT")
 //        PCT.push_back(liczba);
-
 //    QObject *p = sender();
 //    qDebug()  << p->objectName();
 //    qDebug() << LMP.size();

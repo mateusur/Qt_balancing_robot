@@ -33,6 +33,8 @@ InterfaceWindow::InterfaceWindow(QWidget *parent) :
     //connect(this,SIGNAL(send_degrees(double)),ui->widget_robot,SLOT(update_degrees(double)));
     connect(this,SIGNAL(send_angle(double)),ui->widget_robot,SLOT(update_angle(double)));
     tim_elapsed.start();  
+    //model_view = new QQuickWidget;
+     engine = new QQmlApplicationEngine;
 }
 
 void InterfaceWindow::set_pixmap(QLabel *label, const QString &path)
@@ -100,9 +102,9 @@ void InterfaceWindow::recive_data()
     }
     else if(!strcmp((char*)buffRec+1, "BV"))
     {
-        ui->widget_battery->setValue(data.toInt()/10);
-        emit send_point("BV",{key,data.toDouble()/10});
-        ui->widget_battery->setValue(data.toDouble()/10);
+        ui->widget_battery->setValue(data.toInt()/20);
+        emit send_point("BV",{key,data.toDouble()/20});
+        ui->widget_battery->setValue(data.toDouble()/20);
     }
     else if(!strcmp((char*)buffRec+1, "PWQ"))
     {
@@ -132,3 +134,9 @@ void InterfaceWindow::recive_data()
     }
 }
 
+
+void InterfaceWindow::on_pushButton_model_clicked()
+{
+    //model_view->setSource(QUrl::fromLocalFile(":/model/main.qml"));
+    engine->load(QUrl::fromLocalFile(":/model/main.qml"));
+}

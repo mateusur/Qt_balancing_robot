@@ -1,5 +1,6 @@
-QT       += core gui printsupport
-
+QT += core gui printsupport
+QT += quickwidgets
+QT += qml
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11 console

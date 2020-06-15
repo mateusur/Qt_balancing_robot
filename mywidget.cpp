@@ -43,6 +43,6 @@ void MyWidget::paintEvent(QPaintEvent *){
 
 void MyWidget::update_angle(const double &value)
 {
-degrees = value * radToDegrees;
+degrees = (value-0.03) * radToDegrees;
 }
 

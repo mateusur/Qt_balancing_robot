@@ -28,6 +28,11 @@
     <height>770</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>MS Shell Dlg 2</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>KIRA - Self Balancing Robot</string>
   </property>
@@ -553,6 +558,19 @@ qproperty-icon:url(&quot;:/icons/raspberry_48.png&quot;) ;
            </widget>
           </item>
           <item>
+           <widget class="QPushButton" name="pushButton_model">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Show 3D mdoel</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="verticalSpacer_4">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -968,7 +986,7 @@ qproperty-icon:url(&quot;:/icons/raspberry_48.png&quot;) ;
      <attribute name="title">
       <string>Configure</string>
      </attribute>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>10</x>

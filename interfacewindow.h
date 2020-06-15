@@ -13,6 +13,8 @@
 #include "plot.h"
 #include "mywidget.h"
 #include <QElapsedTimer>
+#include <QQuickWidget>
+#include <QQmlApplicationEngine>
 namespace Ui {
 class InterfaceWindow;
 }
@@ -75,6 +77,8 @@ private:
     * Metoda ustawiająca wiele ikon dla wielu etykiet.
     */
     void set_icons();
+    QQuickWidget *model_view;
+    QQmlApplicationEngine *engine;
 
 signals:
     /*!
@@ -93,6 +97,8 @@ signals:
     * \param[in] rad - wartość odchylenia w radianach.
     */
     void send_angle(const double &rad);
+private slots:
+    void on_pushButton_model_clicked();
 };
 
 extern InterfaceWindow* interfaceWindow;

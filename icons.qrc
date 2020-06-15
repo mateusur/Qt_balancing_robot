@@ -8,5 +8,7 @@
         <file>icons/pause.png</file>
         <file>icons/pitch_yaw_roll.png</file>
         <file>icons/engine3-50.png</file>
+        <file>model/blender3.fbx</file>
+        <file>model/main.qml</file>
     </qresource>
 </RCC>
