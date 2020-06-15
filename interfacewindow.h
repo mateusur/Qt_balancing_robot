@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QTime>
 #include <QDateTime>
-#include <QDebug>
+//#include <QDebug>
 #include <QTimer>
 #include <QComboBox>
 #include <QAbstractButton>

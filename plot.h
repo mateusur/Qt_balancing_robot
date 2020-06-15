@@ -15,47 +15,69 @@ class Plot : public QObject
     Q_OBJECT
     /*!
     * \brief Wskaźnik na wykres.
+    *
+    * Wskaźnik na wykres.
     */
     QCustomPlot *graph;
     /*!
     * \brief Wskaźnik na liste rozwijaną.
+    *
+    * Wskaźnik na liste rozwijaną.
     */
     QComboBox *box;
     /*!
     * \brief Wektor przechowujący dane o mocy lewego silnika.
+    *
+    * Wektor przechowujący dane o mocy lewego silnika.
     */
     QVector<QCPGraphData> LMP;
     /*!
     * \brief Wektor przechowujący dane o mocy prawego silnika.
+    *
+    * Wektor przechowujący dane o mocy prawego silnika.
     */
     QVector<QCPGraphData> RMP;
     /*!
     * \brief Wektor przechowujący dane o enkoderze lewego silnika.
+    *
+    * Wektor przechowujący dane o enkoderze lewego silnika.
     */
     QVector<QCPGraphData> MLD;
     /*!
     * \brief Wektor przechowujący dane o enkoderze prawego silnika.
+    *
+    * Wektor przechowujący dane o enkoderze prawego silnika.
     */
     QVector<QCPGraphData> MRD;
     /*!
     * \brief Wektor przechowujący dane o kącie YAW.
+    *
+    * Wektor przechowujący dane o kącie YAW.
     */
     QVector<QCPGraphData> PY;
     /*!
     * \brief Wektor przechowujący dane o napięciu baterii.
+    *
+    * Wektor przechowujący dane o napięciu baterii.
     */
     QVector<QCPGraphData> BV;
     /*!
     * \brief Wektor przechowujący dane o jakości połączenia.
+    *
+    * Wektor przechowujący dane o jakości połączenia.
     */
     QVector<QCPGraphData> PWQ;
     /*!
     * \brief Wektor przechowujący dane o sile połaczenia.
+    *
+    * Wektor przechowujący dane o sile połaczenia.
     */
     QVector<QCPGraphData> PWS;
 
     /*!
     * \brief Wskaźnik na timer odpowiadający za częstotliwość odświeżania wykresu.
+    *
+    * Wskaźnik na timer odpowiadający za częstotliwość odświeżania wykresu.
     */
     QTimer *refresh_tim;
     /*!

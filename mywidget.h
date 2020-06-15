@@ -22,18 +22,26 @@ class MyWidget : public QWidget
 private:
     /*!
     * \brief Wskaźnik na timer określający częstotliwość odświeżania.
+    *
+    * Wskaźnik na timer określający częstotliwość odświeżania.
     */
     QTimer *timer1;
     /*!
     * \brief Zmienna przechowująca kąt obrotu robota.
+    *
+    * Zmienna przechowująca kąt obrotu robota.
     */
     double degrees=0;
     /*!
     * \brief Zmienna przechowująca czy kąt rośnie.
+    *
+    * Zmienna przechowująca czy kąt rośnie.
     */
     bool rising= true;
     /*!
-    * \brief Zmienna przechowująca czy kąt rośnie.
+    * \brief Zmienna przechowująca stałą do zamiany radianów na stopnie.
+    *
+    * Zmienna przechowująca stałą do zamiany radianów na stopnie.
     */
     const double radToDegrees = 180 / M_PI;
 public:
