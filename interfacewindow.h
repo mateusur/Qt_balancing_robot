@@ -77,7 +77,9 @@ private:
     * Metoda ustawiająca wiele ikon dla wielu etykiet.
     */
     void set_icons();
-    QQuickWidget *model_view;
+    /*!
+    * \brief Wskaźnik na aplikacje QML.
+    */
     QQmlApplicationEngine *engine;
 
 signals:
@@ -98,6 +100,11 @@ signals:
     */
     void send_angle(const double &rad);
 private slots:
+    /*!
+    * \brief Metoda otwierająca okno modelu.
+    *
+    * Metoda otwierająca okno modelu.
+    */
     void on_pushButton_model_clicked();
 };
 
