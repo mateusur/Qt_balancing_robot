@@ -10,4 +10,5 @@ Niekótre możliwości aplikacji:
 Zdjęcia pokazujące działanie aplikacji  
 ![](images/zdj.png)
 ![](images/wizualizacja3d.jpg)
-![](images/connectwindow_error.jpg)
+![](images/connectwindow_error.jpg)  
+Współtwórca odpowiedzialny za łączenie się z raspberry: Mateusz Adamczyk
