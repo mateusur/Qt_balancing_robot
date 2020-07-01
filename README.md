@@ -11,4 +11,5 @@ Zdjęcia pokazujące działanie aplikacji
 ![](images/zdj.png)
 ![](images/wizualizacja3d.jpg)
 ![](images/connectwindow_error.jpg)  
+Dodatkowo dodano dokumentację wygenerowaną przy użyciu Doxygena.  
 Współtwórca odpowiedzialny za łączenie się z raspberry: Mateusz Adamczyk
