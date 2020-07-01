@@ -1,5 +1,5 @@
 # Qt_balancing_robot
-Aplikacja pozwalająca na śledzenie parametrów robota balansującego w czasie rzeczywistym.  
+Aplikacja pozwalająca na śledzenie parametrów robota balansującego w czasie rzeczywistym.
 Niekótre możliwości aplikacji:
 - śledzenie m.in. napięcia baterii, siły sygnału,
 - wizualizacja 2D odchylenia robota od pionu,
